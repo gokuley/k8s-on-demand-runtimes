@@ -66,7 +66,6 @@ spec:
     - name: "admin-http"
       port: 3001
       targetPort: 3001
+  type: NodePort
   selector:
     app: rc-k8s-on-demand-runtimes
-status:
-  loadBalancer: {}

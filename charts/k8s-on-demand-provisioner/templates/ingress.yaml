@@ -1,8 +1,8 @@
 {{ if .Values.ingress.enabled }}
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: ingress-robocorp-prov
   annotations:
   {{- with .Values.ingress.annotations }}
   annotations:
@@ -20,11 +20,15 @@ spec:
       secretName: {{ .secretName }}
     {{- end }}
   {{- end }}
+  ingressClassName: alb
   rules:
   - http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: k8s-on-demand-provisioner
-          servicePort: 3000
+          service:
+            name: k8s-on-demand-provisioner
+            port: 
+              number: 3000
 {{ end }}

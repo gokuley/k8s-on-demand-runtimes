@@ -13,13 +13,12 @@ robocontainer:
 
 ingress:
   enabled: true
-  className: ""
   annotations:
-     kubernetes.io/ingress.class: nginx
-     cert-manager.io/cluster-issuer: "cert-manager-global"
-     kubernetes.io/ingress.allow-http: "false"
-  tls:
-    - secretName: k8s-on-demand-provisioner-tls
-      hosts:
-        - ondemand-kube-demo.robocloud.me
+     alb.ingress.kubernetes.io/scheme: internet-facing
+     alb.ingress.kubernetes.io/target-type: ip
+     alb.ingress.kubernetes.io/subnets:  subnet-02956efb57e7b7229, subnet-052c25bf819d1bc34 
+       #  tls:
+       # - secretName: k8s-on-demand-provisioner-tls
+       #hosts:
+       # - ondemand-kube-demo.robocloud.me
 
