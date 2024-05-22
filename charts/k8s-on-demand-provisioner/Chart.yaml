@@ -1,7 +1,0 @@
-name: k8s-on-demand-provisioner
-description: allows self-hosting robocorp cloud runtime environments in a self-hosted kubernetes environment
-version: 0.0.1
-apiVersion: v1
-keywords:
-sources:
-home:
