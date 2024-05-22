@@ -22,7 +22,8 @@ spec:
   {{- end }}
   ingressClassName: alb
   rules:
-  - http:
+  - host: ondemandworkers.thala.in
+    http:
       paths:
       - path: /
         pathType: Prefix
