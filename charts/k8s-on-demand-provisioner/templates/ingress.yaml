@@ -22,7 +22,7 @@ spec:
   {{- end }}
   ingressClassName: alb
   rules:
-  - host: ondemandworkers.thala.in
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
       - path: /
