@@ -22,4 +22,5 @@ ingress:
     - secretName: k8s-on-demand-provisioner-tls
       hosts:
         - ondemand-kube-demo.robocloud.me
-
+   rules:
+    - host: sub_domain
