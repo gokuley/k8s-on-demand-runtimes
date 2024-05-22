@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  robocorp-kube-hosted-runtime:
+  - apiVersion: v1
+    created: "2024-05-22T08:58:46.439132034Z"
+    description: allows self-hosting robocorp cloud runtime environments in a self-hosted
+      kubernetes environment
+    digest: 535d5d94f1bd63f9f664dec60b2eb1c3abfe9ebf38cc6ddf959c1eae1d6148d1
+    name: robocorp-kube-hosted-runtime
+    urls:
+    - https://github.com/gokuley/k8s-on-demand-runtimes/releases/download/robocorp-kube-hosted-runtime-0.0.1/robocorp-kube-hosted-runtime-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-05-22T08:58:46.439143085Z"
