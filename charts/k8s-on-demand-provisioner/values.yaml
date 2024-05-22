@@ -17,6 +17,7 @@ ingress:
      alb.ingress.kubernetes.io/scheme: internet-facing
      alb.ingress.kubernetes.io/target-type: ip
      alb.ingress.kubernetes.io/subnets:  "${public_subnet1}", "${public_subnet2}" 
+     external-dns.alpha.kubernetes.io/hostname: "${sub_domain}"
        #  tls:
        # - secretName: k8s-on-demand-provisioner-tls
        #hosts:
